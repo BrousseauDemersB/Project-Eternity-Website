@@ -1,0 +1,1 @@
+TableHomeMenu = document.getElementById('TableHomeMenu');

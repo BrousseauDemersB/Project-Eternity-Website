@@ -1,0 +1,1 @@
+TableVerticalMenu = document.getElementById('TableVerticalMenu');

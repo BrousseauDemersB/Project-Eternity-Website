@@ -1,0 +1,56 @@
+run.config:
+  engine: php
+  engine.config:
+    runtime: php-7.0
+    allow_url_fopen: "On"
+    browscap: /data/app/browscap.ini
+    date_timezone: US/central
+    default_locale: en_US
+    default_mimetype: text/html
+    disable_functions: 
+      - exec
+      - shell_exec
+      - system
+    display_errors: 'stderr'
+    error_reporting: E_ALL
+    expose_php: "Off"
+    extensions:
+      - pdo_mysql
+      - json
+      - gd
+      - mbstring
+      - pdo
+      - session
+      - xml
+      - zip
+    file_uploads: "1"
+    geoip_custom_directory: /app/app/GeoIP/
+    iconv_internal_encoding: UTF-8
+    php_fpm_max_children: 20
+    max_execution_time: 30
+    max_file_uploads: 20
+    max_input_time: 60
+    max_input_vars: 1000
+    apache_max_requests: 128
+    post_max_size: 500M
+    register_argc_argv: "Off"
+    register_globals: "0"
+    session_autostart: "0"
+    session_length: "3600"
+    session_save_handler: files
+    short_open_tag: "1"
+    upload_max_filesize: 500M
+    zlib_output_compression: "Off"
+
+web.site:
+  start: php-server
+  network_dirs:
+    data.storage:
+      - ZIP
+      - Public
+
+data.db:
+  image: nanobox/mysql:5.6
+
+data.storage:
+  image: nanobox/unfs:0.9

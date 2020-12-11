@@ -1,0 +1,25 @@
+.TableAdminContent
+{
+    text-align: left;
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.TableAdminContent td
+{
+    padding: 8px;
+}
+.TableAdminContent th
+{
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+}
+.TableAdminContent tr:nth-child(even)
+{
+    background-color: #FFFFFF
+}
+.TableAdminContent tr:nth-child(odd)
+{
+    background-color: #f2f2f2
+}

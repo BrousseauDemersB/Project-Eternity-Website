@@ -1,0 +1,134 @@
+@import url("http://fonts.googleapis.com/css?family=Lato");
+*
+{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body
+{
+  padding: 20px;
+  text-align: left;
+  font-family: Lato;
+  color: #fff;
+  background: #6699FF;
+}
+
+h1
+{
+  font-weight: normal;
+  font-size: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+  float: left;
+  margin: 20px 0 100px 10px;
+}
+
+h1 span
+{
+  font-size: 13px;
+  display: block;
+  padding-left: 4px;
+}
+
+.tabs
+{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  float: none;
+  list-style: none;
+  position: relative;
+  text-align: left;
+}
+
+.TabsLi
+{
+  float: left;
+  display: block;
+}
+
+.tabsRadio
+{
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.tabsLabel
+{
+  display: block;
+  padding: 14px 21px;
+  border-radius: 2px 2px 0 0;
+  font-size: 20px;
+  font-weight: normal;
+  text-transform: uppercase;
+  background: #85ADFF;
+  cursor: pointer;
+  position: relative;
+  top: 4px;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 6px solid #ccc;
+}
+
+.tabsLabel:hover
+{
+  background: #297CCF;
+}
+
+.tabs .tab-content
+{
+  z-index: 2;
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  font-size: 17px;
+  line-height: 25px;
+  padding: 25px;
+  position: absolute;
+  top: 53px;
+  left: 0;
+  background: #476BB2;
+}
+
+.tabs [id^="tab"]:checked + label
+{
+  top: 0;
+  padding-top: 17px;
+  background: #476BB2;
+}
+
+.tabs [id^="tab"]:checked ~ [id^="tab-content"]
+{
+  display: block;
+}
+
+p.link
+{
+  clear: both;
+  margin: 380px 0 0 15px;
+}
+
+p.link a
+{
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #476BB2;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+p.link a:hover
+{
+  background-color: #522764;
+}
